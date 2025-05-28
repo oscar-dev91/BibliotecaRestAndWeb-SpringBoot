@@ -1,0 +1,674 @@
+{
+	"info": {
+		"_postman_id": "b18fb4c4-f689-4845-be41-9e002fca6ee1",
+		"name": "Biblioteca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11568587"
+	},
+	"item": [
+		{
+			"name": "Libros",
+			"item": [
+				{
+					"name": "Todos los libros",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/api/libros",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"libros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar libro por ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Oscar Palomino\",\r\n    \"email\": \"oscar.palomino@example.com\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/libros/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"libros",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar libro por titulo, autor, genero y editorial",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Oscar Palomino\",\r\n    \"email\": \"oscar.palomino@example.com\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/libros/buscar?titulo=&autor=&genero&editorial",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"libros",
+								"buscar"
+							],
+							"query": [
+								{
+									"key": "titulo",
+									"value": ""
+								},
+								{
+									"key": "autor",
+									"value": ""
+								},
+								{
+									"key": "genero",
+									"value": null
+								},
+								{
+									"key": "editorial",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Libro",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Carrie\",\r\n    \"autor\": \"Stephen King\",\r\n    \"anoPublicacion\": 1991,\r\n    \"isbn\": \"978-7851365100\",\r\n    \"numeroPaginas\": 298,\r\n    \"genero\": \"Terror\",\r\n    \"editorial\": \"Sudamericana\"\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/libros",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"libros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Libro",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Carrie\",\r\n    \"autor\": \"Stephen King\",\r\n    \"anoPublicacion\": 1991,\r\n    \"isbn\": \"978-7851365100\",\r\n    \"numeroPaginas\": 308,\r\n    \"genero\": \"Terror\",\r\n    \"editorial\": \"Sudamericana\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/libros/37",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"libros",
+								"37"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Libro",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/libros/37",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"libros",
+								"37"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DVDs",
+			"item": [
+				{
+					"name": "Todos los DVDs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/dvds",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"dvds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar DVD por ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Oscar Palomino\",\r\n    \"email\": \"oscar.palomino@example.com\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/dvds/11",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"dvds",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar DVD por titulo, autor y genero",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Oscar Palomino\",\r\n    \"email\": \"oscar.palomino@example.com\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/dvds/buscar?titulo=&autor&genero",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"dvds",
+								"buscar"
+							],
+							"query": [
+								{
+									"key": "titulo",
+									"value": ""
+								},
+								{
+									"key": "autor",
+									"value": null
+								},
+								{
+									"key": "genero",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear DVD",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"El señor de los anillos\",\r\n    \"autor\": \"Peter Jackson\",\r\n    \"anoPublicacion\": 2000,\r\n    \"genero\": \"Aventura\",\r\n    \"duracion\": 185\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/dvds",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"dvds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar DVD",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 11,\r\n    \"titulo\": \"Inception\",\r\n    \"autor\": \"Christopher Nolan\",\r\n    \"anoPublicacion\": 2010,\r\n    \"genero\": \"Ciencia ficción\",\r\n    \"duracion\": 148\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/dvds/11",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"dvds",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar DVD",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"El señor de los anillos\",\r\n    \"autor\": \"Peter Jackson\",\r\n    \"anoPublicacion\": 2000,\r\n    \"genero\": \"Aventura\",\r\n    \"duracion\": 185\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/dvds/38",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"dvds",
+								"38"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Revistas",
+			"item": [
+				{
+					"name": "Todas las revistas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"El señor de los anillos\",\r\n    \"autor\": \"Peter Jackson\",\r\n    \"anoPublicacion\": 2000,\r\n    \"genero\": \"Aventura\",\r\n    \"duracion\": 185\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/revistas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"revistas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar revista por ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"El señor de los anillos\",\r\n    \"autor\": \"Peter Jackson\",\r\n    \"anoPublicacion\": 2000,\r\n    \"genero\": \"Aventura\",\r\n    \"duracion\": 185\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/revistas/21",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"revistas",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar revista por titulo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"El señor de los anillos\",\r\n    \"autor\": \"Peter Jackson\",\r\n    \"anoPublicacion\": 2000,\r\n    \"genero\": \"Aventura\",\r\n    \"duracion\": 185\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/revistas/buscar/titulo?titulo=National",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"revistas",
+								"buscar",
+								"titulo"
+							],
+							"query": [
+								{
+									"key": "titulo",
+									"value": "National"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar revista por autor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"El señor de los anillos\",\r\n    \"autor\": \"Peter Jackson\",\r\n    \"anoPublicacion\": 2000,\r\n    \"genero\": \"Aventura\",\r\n    \"duracion\": 185\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/revistas/buscar/autor?autor=varios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"revistas",
+								"buscar",
+								"autor"
+							],
+							"query": [
+								{
+									"key": "autor",
+									"value": "varios"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar revista por categoría",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"El señor de los anillos\",\r\n    \"autor\": \"Peter Jackson\",\r\n    \"anoPublicacion\": 2000,\r\n    \"genero\": \"Aventura\",\r\n    \"duracion\": 185\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/revistas/buscar/categoria?categoria=actualidad",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"revistas",
+								"buscar",
+								"categoria"
+							],
+							"query": [
+								{
+									"key": "categoria",
+									"value": "actualidad"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear revista",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"NatGeo: Depredadores\",\r\n    \"autor\": \"Varios\",\r\n    \"anoPublicacion\": 2025,\r\n    \"numeroEdicion\": 331,\r\n    \"categoria\": \"Naturaleza\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/revistas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"revistas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar revista",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"NatGeo: Depredadores\",\r\n    \"autor\": \"Varios\",\r\n    \"anoPublicacion\": 2025,\r\n    \"numeroEdicion\": 331,\r\n    \"categoria\": \"Ciencia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/revistas/39",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"revistas",
+								"39"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar revista",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"NatGeo: Depredadores\",\r\n    \"autor\": \"Varios\",\r\n    \"anoPublicacion\": 2025,\r\n    \"numeroEdicion\": 331,\r\n    \"categoria\": \"Ciencia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/revistas/39",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"revistas",
+								"39"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
