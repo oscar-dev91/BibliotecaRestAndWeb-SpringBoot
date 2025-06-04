@@ -83,9 +83,9 @@ El uso de variables de entorno es crucial en entornos de producción porque:
 * GET ``/api/dvds`` - Lista todos los DVDs
 
 ## Endpoints Web de ejemplo
-``/libros`` - Vista con listado de libros
-``/revistas`` - Vista con listado de revistas
-``/dvds`` - Vista con listado de DVDs
+* ``/libros`` - Vista con listado de libros
+* ``/revistas`` - Vista con listado de revistas
+* ``/dvds`` - Vista con listado de DVDs
 
 ## Importar en Postman
 
